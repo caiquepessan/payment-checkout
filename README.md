@@ -2,7 +2,7 @@
 
 Uma página de checkout moderna, profissional e totalmente funcional construída com as melhores tecnologias do mercado.
 
-![Checkout Preview](https://ibb.co/21yFky2H)
+![Checkout Preview](https://i.ibb.co/1tL0mLVj/image.png)
 
 ## ✨ Características
 
