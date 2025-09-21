@@ -174,16 +174,16 @@ export default function ShippingForm({ register, errors, setValue, watch }: Ship
           )}
           {cepSuccess && (
             <p className="mt-1 text-sm text-green-600">
-              ✓ CEP encontrado! Endereço preenchido automaticamente.
+              ✓ CEP encontrado! Rua, cidade e estado preenchidos automaticamente.
             </p>
           )}
           <p className="mt-1 text-xs text-gray-500">
-            Digite apenas números. O endereço será preenchido automaticamente.
+            Digite apenas números. A rua será preenchida automaticamente.
           </p>
         </div>
 
         {/* Endereço */}
-        <div className="md:col-span-2">
+        <div>
           <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-2">
             Endereço *
           </label>
@@ -191,11 +191,28 @@ export default function ShippingForm({ register, errors, setValue, watch }: Ship
             type="text"
             id="address"
             className={`input-field ${errors.shippingAddress?.address ? 'input-error' : ''}`}
-            placeholder="Rua, número, complemento (preenchido automaticamente pelo CEP)"
+            placeholder="Rua, avenida, etc. (preenchido automaticamente)"
             {...register('shippingAddress.address')}
           />
           {errors.shippingAddress?.address && (
             <p className="mt-1 text-sm text-red-600">{errors.shippingAddress.address.message}</p>
+          )}
+        </div>
+
+        {/* Número e Complemento */}
+        <div>
+          <label htmlFor="addressNumber" className="block text-sm font-medium text-gray-700 mb-2">
+            Número e Complemento *
+          </label>
+          <input
+            type="text"
+            id="addressNumber"
+            className={`input-field ${errors.shippingAddress?.addressNumber ? 'input-error' : ''}`}
+            placeholder="Ex: 123, apto 45"
+            {...register('shippingAddress.addressNumber')}
+          />
+          {errors.shippingAddress?.addressNumber && (
+            <p className="mt-1 text-sm text-red-600">{errors.shippingAddress.addressNumber.message}</p>
           )}
         </div>
 
@@ -208,7 +225,7 @@ export default function ShippingForm({ register, errors, setValue, watch }: Ship
             type="text"
             id="city"
             className={`input-field ${errors.shippingAddress?.city ? 'input-error' : ''}`}
-            placeholder="Sua cidade (preenchida automaticamente)"
+            placeholder="Cidade (preenchida automaticamente)"
             {...register('shippingAddress.city')}
           />
           {errors.shippingAddress?.city && (
@@ -226,7 +243,7 @@ export default function ShippingForm({ register, errors, setValue, watch }: Ship
             className={`input-field ${errors.shippingAddress?.state ? 'input-error' : ''}`}
             {...register('shippingAddress.state')}
           >
-            <option value="">Selecione o estado (preenchido automaticamente)</option>
+            <option value="">Estado (preenchido automaticamente)</option>
             {states.map((state) => (
               <option key={state} value={state}>
                 {state}

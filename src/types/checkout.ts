@@ -13,6 +13,7 @@ export interface ShippingAddress {
   email: string
   phone: string
   address: string
+  addressNumber: string
   city: string
   state: string
   zipCode: string

@@ -52,26 +52,22 @@ export const paymentMethods = [
   {
     id: 'credit',
     name: 'Cartão de Crédito',
-    description: 'Visa, Mastercard, American Express',
-    icon: '💳'
+    description: 'Visa, Mastercard, American Express'
   },
   {
     id: 'debit',
     name: 'Cartão de Débito',
-    description: 'Visa, Mastercard',
-    icon: '💳'
+    description: 'Visa, Mastercard'
   },
   {
     id: 'pix',
     name: 'PIX',
-    description: 'Pagamento instantâneo',
-    icon: '⚡'
+    description: 'Pagamento instantâneo'
   },
   {
     id: 'boleto',
     name: 'Boleto Bancário',
-    description: 'Vencimento em 3 dias',
-    icon: '📄'
+    description: 'Vencimento em 3 dias'
   }
 ]
 

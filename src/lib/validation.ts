@@ -6,6 +6,7 @@ export const shippingAddressSchema = z.object({
   email: z.string().email('Email inválido'),
   phone: z.string().min(10, 'Telefone deve ter pelo menos 10 dígitos'),
   address: z.string().min(5, 'Endereço deve ter pelo menos 5 caracteres'),
+  addressNumber: z.string().min(1, 'Número é obrigatório'),
   city: z.string().min(2, 'Cidade deve ter pelo menos 2 caracteres'),
   state: z.string().min(2, 'Estado deve ter pelo menos 2 caracteres'),
   zipCode: z.string().min(8, 'CEP deve ter pelo menos 8 dígitos'),
