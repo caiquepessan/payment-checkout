@@ -35,7 +35,7 @@ Uma página de checkout moderna, profissional e totalmente funcional construída
 
 1. **Clone o repositório**
    ```bash
-   git clone https://github.com/seu-usuario/checkout-moderno.git
+   git clone https://github.com/caiquepessan/checkout-moderno.git
    cd checkout-moderno
    ```
 

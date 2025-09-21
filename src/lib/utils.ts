@@ -103,11 +103,15 @@ export function formatCEP(value: string): string {
 
 export function formatPhone(value: string): string {
   const v = value.replace(/\D/g, '')
-  if (v.length <= 10) {
-    return v.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3')
-  } else {
-    return v.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')
-  }
+  
+  if (v.length === 0) return ''
+  if (v.length <= 2) return `(${v}`
+  if (v.length <= 6) return `(${v.slice(0, 2)}) ${v.slice(2)}`
+  if (v.length <= 10) return `(${v.slice(0, 2)}) ${v.slice(2, 6)}-${v.slice(6)}`
+  if (v.length <= 11) return `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`
+  
+  // Limita a 11 dígitos
+  return `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7, 11)}`
 }
 
 export interface CEPResponse {

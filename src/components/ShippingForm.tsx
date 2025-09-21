@@ -17,6 +17,7 @@ export default function ShippingForm({ register, errors, setValue, watch }: Ship
   const [isLoadingCEP, setIsLoadingCEP] = useState(false)
   const [cepError, setCepError] = useState('')
   const [cepSuccess, setCepSuccess] = useState(false)
+  const [phoneValue, setPhoneValue] = useState('')
   
   const currentZipCode = watch('shippingAddress.zipCode')
 
@@ -58,6 +59,7 @@ export default function ShippingForm({ register, errors, setValue, watch }: Ship
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const formattedPhone = formatPhone(e.target.value)
+    setPhoneValue(formattedPhone)
     setValue('shippingAddress.phone', formattedPhone)
   }
 
@@ -127,8 +129,9 @@ export default function ShippingForm({ register, errors, setValue, watch }: Ship
             id="phone"
             className={`input-field ${errors.shippingAddress?.phone ? 'input-error' : ''}`}
             placeholder="(11) 99999-9999"
+            value={phoneValue}
             onChange={handlePhoneChange}
-            {...register('shippingAddress.phone')}
+            maxLength={15}
           />
           {errors.shippingAddress?.phone && (
             <p className="mt-1 text-sm text-red-600">{errors.shippingAddress.phone.message}</p>
