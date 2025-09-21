@@ -59,17 +59,17 @@ export default function SuccessModal({ isOpen, onClose, orderNumber, total }: Su
 
         {/* Actions */}
         <div className="space-y-3">
-          <button
-            onClick={onClose}
-            className="w-full btn-primary"
+          <a
+            href={`/confirmacao?order=${orderNumber}`}
+            className="w-full btn-primary flex items-center justify-center"
           >
-            Continuar Comprando
-          </button>
+            Ver Detalhes do Pedido
+          </a>
           <button
             onClick={onClose}
             className="w-full btn-secondary"
           >
-            Acompanhar Pedido
+            Continuar Comprando
           </button>
         </div>
       </div>
