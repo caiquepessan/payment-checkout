@@ -2,7 +2,7 @@
 
 Uma página de checkout moderna, profissional e totalmente funcional construída com as melhores tecnologias do mercado.
 
-![Checkout Preview](https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=600&fit=crop)
+![Checkout Preview](https://ibb.co/21yFky2H)
 
 ## ✨ Características
 
@@ -195,8 +195,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 👨‍💻 Autor
 
 **Seu Nome**
-- GitHub: [@seu-usuario](https://github.com/seu-usuario)
-- LinkedIn: [Seu Perfil](https://linkedin.com/in/seu-perfil)
+- GitHub: [@seu-usuario](https://github.com/caiquepessan)
 
 ## 🙏 Agradecimentos
 
